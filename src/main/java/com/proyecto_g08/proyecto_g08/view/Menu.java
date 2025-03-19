@@ -1,17 +1,21 @@
 package com.proyecto_g08.proyecto_g08.view;
 
-import javax.swing.*;
-import com.proyecto_g08.proyecto_g08.model.*;
+import javax.swing.JOptionPane;
+import com.proyecto_g08.proyecto_g08.service.Configuracion;
+import com.proyecto_g08.proyecto_g08.service.CreacionTiquetes;
+import com.proyecto_g08.proyecto_g08.service.AtencionTiquetes;
+import com.proyecto_g08.proyecto_g08.service.Reporte;
+
 
 public class Menu {
 
     public static void mostrarMenu() {
         String[] opciones = {
-                "1. Configurar Banco",
-                "2. Gestionar Cajas",
-                "3. Atender Cliente",
-                "4. Generar Reportes",
-                "5. Salir"
+                "0. Configurar Banco",
+                "1. Crear tiquete",
+                "2. Atender Cliente",
+                "3. Generar Reportes",
+                "4. Salir"
         };
 
         boolean salir = false;
@@ -32,8 +36,8 @@ public class Menu {
                 case 0: // Configurar Banco
                     JOptionPane.showMessageDialog(null, "Función para configurar el banco aún no implementada.");
                     break;
-                case 1: // Gestionar Cajas
-                    JOptionPane.showMessageDialog(null, "Función para gestionar cajas aún no implementada.");
+                case 1: // Crear Tiquete
+                    CreacionTiquetes.crearTiquete();
                     break;
                 case 2: // Atender Cliente
                     JOptionPane.showMessageDialog(null, "Función para atender cliente aún no implementada.");
