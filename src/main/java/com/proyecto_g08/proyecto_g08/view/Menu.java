@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 import com.proyecto_g08.proyecto_g08.service.Configuracion;
 import com.proyecto_g08.proyecto_g08.service.CreacionTiquetes;
 import com.proyecto_g08.proyecto_g08.service.AtencionTiquetes;
+import com.proyecto_g08.proyecto_g08.service.LlenadoColas;
 import com.proyecto_g08.proyecto_g08.service.Reporte;
 
 
@@ -14,6 +15,7 @@ public class Menu {
                 "0. Configurar Banco",
                 "1. Crear tiquete",
                 "2. Atender Cliente",
+                "3. Llenado de colas",
                 "3. Generar Reportes",
                 "4. Salir"
         };
@@ -34,7 +36,7 @@ public class Menu {
 
             switch (seleccion) {
                 case 0: // Configurar Banco
-                    JOptionPane.showMessageDialog(null, "Función para configurar el banco aún no implementada.");
+                    Configuracion.agregar();
                     break;
                 case 1: // Crear Tiquete
                     CreacionTiquetes.crearTiquete();
@@ -42,10 +44,13 @@ public class Menu {
                 case 2: // Atender Cliente
                     JOptionPane.showMessageDialog(null, "Función para atender cliente aún no implementada.");
                     break;
-                case 3: // Generar Reportes
+                case 3: // Llenado de colas
                     JOptionPane.showMessageDialog(null, "Función para generar reportes aún no implementada.");
                     break;
-                case 4: // Salir
+                case 4: // Generar Reportes
+                    JOptionPane.showMessageDialog(null, "Función para generar reportes aún no implementada.");
+                    break;
+                case 5: // Salir
                     salir = true;
                     break;
                 default:
