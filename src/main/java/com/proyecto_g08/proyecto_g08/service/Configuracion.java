@@ -48,7 +48,7 @@ public class Configuracion {
         }
     }
 
-    private static boolean configuracionYaExiste() {
+    public static boolean configuracionYaExiste() {
         File archivo = new File(ARCHIVO_CONFIG);
         return archivo.exists() && archivo.length() > 0;
     }

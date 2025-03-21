@@ -6,6 +6,11 @@ import java.time.LocalDateTime;
 
 public class CreacionTiquetes {
     public static Tiquete crearTiquete() {
+        if (!Configuracion.configuracionYaExiste()) {
+            JOptionPane.showMessageDialog(null, "No se ha configurado el banco");
+            return null;
+        }
+
         try {
             String nombreCliente = JOptionPane.showInputDialog("Ingrese el nombre del cliente:");
             if (nombreCliente == null) throw new Exception("Entrada cancelada");
@@ -64,6 +69,7 @@ public class CreacionTiquetes {
         }
     }
 }
+
 
 
 
