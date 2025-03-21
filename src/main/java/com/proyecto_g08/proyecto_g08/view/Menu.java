@@ -36,7 +36,7 @@ public class Menu {
 
             switch (seleccion) {
                 case 0: // Configurar Banco
-                    Configuracion.agregar();
+                    Configuracion.configurarBanco();
                     break;
                 case 1: // Crear Tiquete
                     CreacionTiquetes.crearTiquete();
