@@ -12,7 +12,6 @@ public class Menu {
 
     public static void mostrarMenu() {
         String[] opciones = {
-                "0. Configurar Banco",
                 "1. Crear tiquete",
                 "2. Atender Cliente",
                 "3. Llenado de colas",
@@ -35,11 +34,8 @@ public class Menu {
             );
 
             switch (seleccion) {
-                case 0: // Configurar Banco
-                    Configuracion.configurarBanco();
-                    break;
                 case 1: // Crear Tiquete
-                    CreacionTiquetes.crearTiquete();
+
                     break;
                 case 2: // Atender Cliente
                     JOptionPane.showMessageDialog(null, "Función para atender cliente aún no implementada.");

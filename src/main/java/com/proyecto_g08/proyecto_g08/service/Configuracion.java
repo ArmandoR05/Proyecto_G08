@@ -5,7 +5,6 @@ import javax.swing.*;
 import com.proyecto_g08.proyecto_g08.model.Banco;
 
 public class Configuracion {
-    private static final String ARCHIVO_CONFIG = "banco.txt";
 
     public static void configurarBanco() {
         if (!configuracionYaExiste()) {
@@ -18,7 +17,7 @@ public class Configuracion {
     }
 
     private static void guardarConfiguracion() {
-        try (DataOutputStream archivo = new DataOutputStream(new FileOutputStream(ARCHIVO_CONFIG))) {
+        try (DataOutputStream archivo = new DataOutputStream(new FileOutputStream("banco.txt"))) {
             String nombre = JOptionPane.showInputDialog("Ingrese el nombre del banco: ");
             int cantidadCajas = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el número de cajas: "));
 
@@ -34,7 +33,7 @@ public class Configuracion {
     }
 
     private static Banco cargarBancoDesdeArchivo() {
-        try (DataInputStream archivo = new DataInputStream(new FileInputStream(ARCHIVO_CONFIG))) {
+        try (DataInputStream archivo = new DataInputStream(new FileInputStream("banco.txt"))) {
             String nombre = archivo.readUTF();
             int cantidadCajas = archivo.readInt();
 
@@ -49,7 +48,7 @@ public class Configuracion {
     }
 
     public static boolean configuracionYaExiste() {
-        File archivo = new File(ARCHIVO_CONFIG);
+        File archivo = new File("banco.txt");
         return archivo.exists() && archivo.length() > 0;
     }
 }
